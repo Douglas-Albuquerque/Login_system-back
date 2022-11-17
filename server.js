@@ -1,12 +1,12 @@
 import app from './src/app';
 
 const express = require("express");
-const { resolve } = require("path");
 const app = express();
+
 const port = process.env.PORT || 5000;
 
 //app.listen(5000);
-app.get("/", function (req, res) {
+app.use("/", function (req, res) {
   res.send("hello");
 });
 
