@@ -16,7 +16,7 @@
     "sucrase": "^3.28.0"
   },
   "scripts": {
-    "start": "node ./server.js",
-    "dev": "node ./server.js"
+    "start": "nodemon ./server.js",
+    "dev": "nodemon ./server.js"
   }
 }
