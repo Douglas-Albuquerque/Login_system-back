@@ -47,7 +47,13 @@ class UsersController {
         lastName
       });
 
-      return res.status(201).json(newUser);
+      return res.status(201).json(
+        {
+          message: "Usuário cadastrado com sucesso",
+          newUser
+        }
+      );
+
     } catch (err) {
       console.error(err);
       return res.status(500).json({ error: "internal server error." });
@@ -90,7 +96,7 @@ class UsersController {
 
       await user.deleteOne();
 
-      return res.status(200).json();
+      return res.status(200).json({ message: "Usuário deletado." });
 
     } catch (err) {
       console.error(err);
