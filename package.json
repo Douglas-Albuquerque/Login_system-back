@@ -5,21 +5,19 @@
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "corepack": "^0.15.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.0",
-    "nodemon": "^2.0.20",
-    "pnpm": "^7.17.0"
+    "nodemon": "^2.0.20"
   },
   "devDependencies": {
     "sucrase": "^3.28.0"
   },
   "scripts": {
-    "start": "/netlify-lambda serve src",
-    "build": "/node_modules/.bin/netlify-lambda build src",
+    "start": "nodemon ./server.js",
+    "build": "nodemon ./server.js",
     "dev": "nodemon ./server.js"
   }
 }
